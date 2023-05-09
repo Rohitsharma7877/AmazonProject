@@ -1,11 +1,15 @@
 const Products = require("./models/productsSchema")
 
-const Productsdata = require ("./constant/productsdata")
+const productsdata = require ("./constant/productsdata")
 
 const DefaultData = async()=>{
     try{
+
+         await Products.deleteMany({})
+         
         const storeData = await Products.insertMany(productsdata)
         console.log(storeData);
+        res.send(storeData)
     }catch (error){
         console.log("error"+ error.message)
 
@@ -13,4 +17,4 @@ const DefaultData = async()=>{
 }
 
 
-module.exports = DefaultData()
+module.exports = DefaultData

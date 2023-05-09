@@ -6,10 +6,9 @@ import Maincomp from './components/home/Maincomp';
 import Footer from './components/footer/Footer'
 import SignIn from './components/signup_signin/SignIn';
 import SignUp from './components/signup_signin/SignUp';
-import { Routes,Route} from 'react-router-dom';
 import Cart from './components/cart/Cart';
 import Buynow from './components/buynow/Buynow';
-
+import { Routes,Route} from 'react-router-dom';
 
 
 function App() {
@@ -25,7 +24,7 @@ function App() {
       <Route path='/getproductsone/:id' element={<Cart/>} />
       <Route path='/buynow' element={<Buynow/>} />
     </Routes>
-    {/* <Maincomp/> */}
+   
     <Footer/>
    </>
     </div>
